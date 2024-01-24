@@ -1,0 +1,190 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+}
+
+body {
+    flex-wrap: wrap;
+    flex: 1 1 100vw;
+    background-image: url(../imagens/imagem-de-fundo.png);
+    backdrop-filter: blur(10px);
+    background-size: cover;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+header,
+nav {
+    background-color: rgb(34, 34, 34);
+    margin: 3px;
+    display: flex;
+}
+
+header {
+    flex: 1 1 100vw;
+    height: 100px;
+    order: 0;
+}
+
+header #logo {
+    transform: scale(1.5);
+    padding: 0 0 0 15px;
+}
+
+#openMenu,
+#closeMenu {
+    border: none;
+    background: none;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 0 20px 0 0;
+    cursor: pointer;
+    display: none;
+}
+
+nav {
+    flex: 1 1 100vw;
+    align-items: center;
+    justify-content: flex-end;
+    z-index: 2;
+}
+
+nav a {
+    margin: 3%;
+    font-size: 20pt;
+    text-align: center;
+}
+
+main {
+    flex: 20 1 500px;
+    order: 1;
+    text-align: center;
+    align-items: center;
+}
+
+main img {
+    max-width: 100%;
+    height: auto;
+    z-index: 1;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+@media only screen and (min-width: 717px) {
+    h1 {
+        font-size: 500%;
+        font-weight: 100;
+    }
+    .container {
+        display: flex;
+        text-align: center;
+        background-image: url('../imagens/fundo-texto.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        justify-content: space-between;
+    }
+    .card-container {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin: 10px;
+    }
+    .card-container p {
+        display: flex;
+        font-size: 30px;
+    }
+}
+
+@media only screen and (max-width: 717px) {
+    #openMenu,
+    #closeMenu {
+        display: block;
+    }
+    #openMenu {
+        margin-left: auto;
+    }
+    #closeMenu {
+        position: fixed;
+        right: 10px;
+        top: 35px;
+    }
+    nav {
+        position: fixed;
+        flex-direction: column;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(18, 18, 18, 0.8);
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        display: none;
+        opacity: 0;
+        transition: 0.3s;
+    }
+}
+
+.imagem-teste {
+    background-image: url('../imagens/fundo-texto.png');
+    position: relative;
+    left: -66px;
+}
+
+.container {
+    text-align: center;
+    background-image: url('../imagens/fundo-texto.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.imagem-sobre {
+    margin-top: -120px;
+}
+
+.texto-fundo {
+    margin-top: 35px;
+    margin-bottom: 30px;
+}
+
+.container-imagem {
+    display: flex;
+    flex: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-imagem img {
+    width: 165px;
+    max-height: 300px;
+    padding: 5px;
+}
+
+.card-tabpreco {
+    transform: scale(0.8);
+    margin-top: -75px;
+}
+
+#borda-imagem {
+    border-radius: 10px;
+}
+
+.site-footer {
+    background-color: rgb(34, 34, 34);
+    padding: 20px 0;
+    text-align: center;
+    font-size: 14px;
+}
+
+.site-footer p {
+    color: white;
+}
+
+.footer-content a {
+    text-decoration: revert;
+}
